@@ -1,0 +1,56 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<div class="about-section">
+    <h1>About Us Page</h1>
+    <p class="hero1">भवान् अत्र अस्माकं विषये किञ्चित् ज्ञानं संग्रहीतुं शक्नोति ||</p>
+    <p class="hero2">Always be Positive, <br>
+        Always think Positive .
+    </p>
+  </div>
+  
+  <h1 style="text-align:center;">Our Team</h1>
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <img src="{% static 'blog/aman.png' %}" alt="Jane" style="width:100%">
+        <div class="container">
+          <h2>Aman Kumar Dubey</h2>
+          <div class="title">
+          <p>Developer <br>
+              B.Tech <br> (CSE)
+        </p>
+          <p>amankd12345@gmail.com</p>
+        </div>
+          <p><a href="http://127.0.0.1:8000/contact/"><button class="buttona">Contact</button></a></p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="column">
+      <div class="card">
+        <img src="{% static 'blog/rishabh3.png' %}" alt="John" style="width:100%">
+        <div class="container">
+          <h2>Rishabh Kumar Singh</h2>
+          <div class="title">
+          <p>Developer<br>
+          B.Tech <br>(CSE)</p>
+          <p>rishabhs123@gmail.com</p>
+        </div>
+          <p><a href="http://127.0.0.1:8000/contact/"><button class="buttona">Contact</button></a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">  
+    <marquee>
+    @Copyright <a href="http://127.0.0.1:8000/" class="hero3"> MyBlog </a> 2023- All Right Reserved.  
+    </marquee> 
+    </div> 
+
+
+{% endblock content %}

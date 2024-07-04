@@ -1,0 +1,70 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+
+
+    <h2 class="text-info my-5 text-center bg-warning">
+        
+        Home Page
+    
+    </h2>
+    
+    
+    <div>
+    <div class="container custom-container " style="max-width: 1350px; ">
+
+        {% for post in posts %}
+        <article class="media content-section ">
+
+            <div class="media-body " style="border: 1px solid black; padding: 23px; margin-bottom: 10px; background-color: antiquewhite;">
+                <div class="article-metadata">
+                 
+                    <h1 class="text-uppercase" style="text-align:left;float:left; color: #000000;">{{full_name}}</h1>
+                    <h5 style="text-align:right;float:right;"class="text-info">{{ post.date_posted|date:"F d, Y" }}</h5>
+                    
+
+                </div>
+                <h3>{{ post.title }}</h3>
+                <p class="article-content">{{ post.desc }}</p>
+                <br><br>
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+    
+    </div>
+    <!-- <div class="container custom-container" style="max-width: 1350px; ">
+        {% for post in posts %}
+        <article class="media content-section">
+
+            <div class="media-body" style="border: 1px solid black; padding: 23px; margin-bottom: 10px;">
+                <div class="article-metadata">
+                   
+                    <h1 class="text-uppercase" style="text-align:left;float:left; color: #000000;">{{ post.author }}</h1>
+                    <h5 style="text-align:right;float:right;">{{ post.date_posted|date:"F d, Y" }}</h5>
+                    <hr style="clear:both;" />
+
+                </div>
+                <h3>{{ post.title }}</h3>
+                <p class="article-content">{{ post.content }}</p>
+                <br><br>
+            </div>
+        </article>
+        {% endfor %}
+    </div> -->
+
+<!-- </div> -->
+
+
+<div class="footer">  
+    <marquee>
+    @Copyright <a href="http://127.0.0.1:8000/" class="hero3"> MyBlog </a> 2023- All Right Reserved.  
+    </marquee> 
+    </div> 
+
+
+
+{% endblock content %}

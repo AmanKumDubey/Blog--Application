@@ -1,0 +1,58 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Mini Blog</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://127.0.0.1:8000/about/">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://127.0.0.1:8000/contact/">Contact</a>
+          </li>
+          {% if request.user.is_authenticated %}
+          <li class="nav-item">
+            <a class="nav-link" href="http://127.0.0.1:8000/dashbord/">Dashbord</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'user_logout' %}">Logout</a>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="http://127.0.0.1:8000/signup/">Signup</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="http://127.0.0.1:8000/login/">Login</a>
+          </li>
+          <li class="nav-item ml-5 mr-5"></li>
+          <li class="nav-item ml-5 mr-5"></li>
+          <li class="nav-item ml-5 mr-5"></li>
+          <li class="nav-item ml-5 mr-5"></li>
+          <li class="nav-item ml-5 mr-5"></li>
+          <li class="nav-item ml-5 mr-5"></li>
+          <li class="nav-item ml-5 mr-5">
+            <form class="form-inline my-2 ml-5">
+              <div class="dropdown">
+                  <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Profile
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="http://127.0.0.1:8000/addpost/">New Post</a>
+                    <a class="dropdown-item" href="http://127.0.0.1:8000/dashbord/">My Posts</a>
+                    <a class="dropdown-item" href="http://127.0.0.1:8000/signup/">Sign Up</a>
+                  </div>
+                </div>
+          </form>
+        </li>
+         
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+  </nav>
